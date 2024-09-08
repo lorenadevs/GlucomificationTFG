@@ -1,0 +1,101 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MauiApp1
+build_property.ProjectDir = D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/Pages/Busqueda.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Pages.Busqueda.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Busqueda.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Busqueda.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/Pages/GuiaInicial.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Pages.GuiaInicial.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\GuiaInicial.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\GuiaInicial.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/Pages/MenuEdicion.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Pages.MenuEdicion.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MenuEdicion.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MenuEdicion.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/Pages/ObtencionLogro.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Pages.ObtencionLogro.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ObtencionLogro.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ObtencionLogro.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/Pages/PagAnim.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Pages.PagAnim.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\PagAnim.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\PagAnim.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/Pages/PaginaLogros.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Pages.PaginaLogros.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\PaginaLogros.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\PaginaLogros.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/Pages/Perfil.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Pages.Perfil.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Perfil.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Perfil.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/Pages/PerfilUsuario.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Pages.PerfilUsuario.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\PerfilUsuario.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\PerfilUsuario.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/Pages/Registro.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Pages.Registro.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Registro.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Registro.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/Glucomification/BACKUP2405/GlucoFirst/MauiApp1/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

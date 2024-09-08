@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.ObtencionLogro"
+             Title="ObtencionLogro">
+    <ScrollView>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="White" Offset="0.03" />
+                    <GradientStop Color="#dfe9f3" Offset="0.4" />
+                    <GradientStop Color="#FAFFD1" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <VerticalStackLayout Margin="30" VerticalOptions="Start" HorizontalOptions="Center" x:Name="verticalLayout">
+                <ImageButton Source="backarrow.png" x:Name="btnVolver" Margin="-10,0,0,10" Clicked="VolverAtras" MaximumHeightRequest="20" HorizontalOptions="Start" VerticalOptions="Start"/>
+
+                <Label FontFamily="Anthelion" Margin="10, 10, 0,25" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                Text="¡Enhorabuena! Has obtenido los siguientes logros: " FontSize="27"
+                VerticalOptions="Center" 
+                TextColor="#000700"
+                HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+        </Grid>
+
+    </ScrollView>
+
+</ContentPage>

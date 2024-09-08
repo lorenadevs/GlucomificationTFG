@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MauiApp1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiApp1"
+    xmlns:paginas="clr-namespace:MauiApp1.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Glucomification">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TabBar">
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#FFFFFF" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="DarkOliveGreen" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="Gray" />
+                <Setter Property="Shell.TabBarTitleColor" Value="Green" />
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar x:Name="pruebanav" IsVisible="True">
+        <Tab Title="Inicio"
+            Icon="home.png" >
+            <ShellContent ContentTemplate="{DataTemplate paginas:Perfil}" />
+        </Tab>
+        <Tab Title="Perfil"
+            Icon="user.png">
+            <ShellContent ContentTemplate="{DataTemplate paginas:PerfilUsuario}" />
+        </Tab>
+        <Tab Title="Buscador"
+            Icon="search.png">
+            <ShellContent ContentTemplate="{DataTemplate paginas:Busqueda}" />
+        </Tab>
+
+        <Tab Title="Colección"
+            Icon="coleccion.png">
+            <ShellContent ContentTemplate="{DataTemplate paginas:PaginaLogros}" />
+        </Tab>
+    </TabBar>
+
+    <ShellContent Title="Start" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+
+
+
+
+
+</Shell>

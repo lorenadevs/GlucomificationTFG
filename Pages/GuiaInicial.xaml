@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.GuiaInicial"
+             xmlns:local="clr-namespace:MauiApp1.Pages"
+             Title="GuiaInicial" Shell.NavBarIsVisible="False">
+
+    <VerticalStackLayout>
+        <CarouselView Margin="30" x:Name="carouselDiapositivas" VerticalOptions="Center" HorizontalOptions="Center" ItemsSource="{Binding Diapositivas}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Image Source="{Binding Imagen}" />
+                        <Label Text="{Binding Titulo}" FontSize="Large" HorizontalOptions="Center" />
+                        <Label Text="{Binding Contenido}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <CheckBox x:Name="checkNoMostrar"/>
+        <Label Text="No mostrar de nuevo" VerticalOptions="Center" HorizontalOptions="Center"/>
+    </VerticalStackLayout>
+</ContentPage>

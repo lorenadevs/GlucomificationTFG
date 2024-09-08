@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Glucomification</name>
+    </assembly>
+    <members>
+        <member name="M:MauiApp1.App.ShowTabBar">
+            Tras el login, hacer que se muestre la barra inferior
+        </member>
+        <member name="M:MauiApp1.MainPage.Animar(System.Object,System.EventArgs)">
+            Método que anima el botón de login
+        </member>
+        <member name="T:MauiApp1.Modelos.UsuarioLogro">
+            Esta clase es necesaria porque Postgres no permite tener una FK de arrays, por lo que al intentar asignar varios logros a un usuario se produce un error.
+            Se ha creado una tabla alternativa únicamente de usuarios y sus respectivos logros, siendo ambos campos FK tanto de la tabla usuarios como de la tabla logros.
+        </member>
+        <member name="M:MauiApp1.Pages.PopUpMenu.EstablecerEstadoToggle">
+            Establece si está activo o no al abrir el menú
+        </member>
+        <member name="M:MauiApp1.Pages.PopUpMenu.CambiarVisibilidad(System.Object,Microsoft.Maui.Controls.ToggledEventArgs)">
+            Método que cambia el ajuste de la visibilidad del perfil según el estado del switch
+        </member>
+        <member name="M:MauiApp1.Pages.Perfil.ObtenerEstadisticas">
+            Asigna el número de lecturas y el porcentaje en rango
+        </member>
+        <member name="M:MauiApp1.Pages.Perfil.ObtenerDatos24H">
+            Método que obtiene las lecturas de glucosa y sus horas del último día del usuario logeado específico
+        </member>
+        <member name="M:MauiApp1.Pages.PerfilUsuario.MostrarLogros(System.String,System.String)">
+            Muestra los logros obtenidos del usuario. Si no tiene, se mostrarán logros vacíos
+        </member>
+        <member name="M:MauiApp1.Services.DataService.PonerTokenEnUso(System.String)">
+            Pone el token especificado en valor true para no asignarlo a ningún otro usuario
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerUltimaLectura(System.String)">
+            Obtiene la última lectura para ponerla superpuesta en el gráfico
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerLecturas24H(System.String)">
+            Obtiene las lecturas de glucosa del usuario logeado ordenándolas por fecha de más antigua a más reciente en las últimas 24 horas
+            Salta excepción cuando no encuentra resultados
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerLecturasSemanales(System.String)">
+            Todas las lecturas con fecha mayor al día actual - 168 horas (7 días)
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerPorcentajeRango(System.String)">
+            Porcentaje de tiempo que ha estado en un rango entre 70 y 180 en la última semana
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerLecturasTotales">
+            Obtiene todas las lecturas de glucosa del usuario logeado ordenándolas por fecha de más antigua a más reciente
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerTokenUserEspecifico(System.String)">
+            Obtiene el token del usuario específico para ponerlo en preferencias y asegurar persistencia de datos
+            
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerLogros">
+            Obtiene todos los logros de la BD
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerLogrosUsuario(System.String)">
+            Obtiene todos los logros desbloqueados del usuario, para así poner la imagen de estos a color. Los no desbloqueados se mostrarán en blanco y negro.
+        </member>
+        <member name="M:MauiApp1.Services.DataService.EstablecerLogroMostrado(System.Int32,System.String)">
+            Establece en true el campo 'mostrado' de un logro específico. De esta manera no se repetirá la animación de obtención de logro
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerInfoLogro(System.Int32)">
+            Devuelve la descripción del logro con dicho ID
+        </member>
+        <member name="M:MauiApp1.Services.DataService.GenerarToken">
+            Obtiene un token de la base de datos que tenga el campo en_uso como false
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerValoresGrafico(System.Threading.Tasks.Task{System.Collections.Generic.List{MauiApp1.Modelos.Lectura}})">
+            Método para plasmar los valores de las últimas 24 horas en el gráfico
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerFecha24H">
+            Función útil para realizar operaciones de únicamente las últimas 24 horas
+        </member>
+        <member name="M:MauiApp1.Services.DataService.LogroPrimeraLectura">
+            Logro que se desbloquea al realizar la primera lectura
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ComprobarSiEstaObtenido(System.Int32)">
+            Comprueba que un logro aún no haya sido desbloqueado por el usuario
+        </member>
+        <member name="M:MauiApp1.Services.DataService.LogroTodasLecturas24H">
+            Devuelve si el usuario ha realizado todas las lecturas recomendadas (>=12) en las últimas 24 horas
+        </member>
+        <member name="M:MauiApp1.Services.DataService.LogroGlucosaEnRango24H">
+            Devuelve true si el usuario no ha tenido ninguna hipo ni hiperglucemia en las últimas 24 horas
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ComprobarNuevosLogros">
+            Comprueba si el usuario ha desbloqueado algún logro nuevo. Se llama al entrar en el perfil
+        </member>
+        <member name="M:MauiApp1.Services.DataService.ObtenerListadoUsuarios">
+            Lista de usuarios en toda la BD
+        </member>
+        <member name="M:MauiApp1.Services.DataService.BuscarUsuario(System.String)">
+            Obtiene los usuarios que coincidan con el texto introducido en la barra de búsqueda
+        </member>
+        <member name="M:MauiApp1.Services.DataService.MostrarGrafico(Microcharts.Maui.ChartView,System.String,Microsoft.Maui.Controls.Label,Microsoft.Maui.Controls.Image,Microsoft.Maui.Controls.Label)">
+            El primer parámetro es el propio gráfico, el segundo es el token del usuario para facilitar las consultas y el tercero es el label que muestra el último valor de glucosa
+            Este método se llama desde el perfil y el home
+        </member>
+        <member name="M:MauiApp1.Services.DataService.MostrarTendencia(System.String,Microsoft.Maui.Controls.Image)">
+            Muestra una flecha subiendo, bajando o recta dependiendo de la tendencia de la última lectura de glucosa
+        </member>
+    </members>
+</doc>

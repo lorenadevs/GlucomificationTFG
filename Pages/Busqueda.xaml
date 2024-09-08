@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.Busqueda"
+             Title="Busqueda" Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <Grid>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="White" Offset="0.05" />
+                    <GradientStop Color="#dfe9f3" Offset="0.2" />
+                    <GradientStop Color="White" Offset="0.9" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <VerticalStackLayout Margin="30, 10, 30, 0">
+
+            <Label 
+                Text="Echa un vistazo al resto de usuarios" FontFamily="Anthelion" Margin="0, 35, 0, 20" TextColor="#000700"
+                VerticalOptions="Center" FontSize="35" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                HorizontalOptions="Center" />
+
+
+                <SearchBar TextChanged="barraBusqueda_TextChanged" FontFamily="Recoleta" FontSize="16" x:Name="barraBusqueda" SearchButtonPressed="barraBusqueda_SearchButtonPressed"
+                       CancelButtonColor="Red" CharacterSpacing="3" Placeholder="Nombre de usuario..." PlaceholderColor="Gray" MaxLength="20"/>
+
+            <ListView x:Name="listViewBusqueda" SelectionMode="Single" ItemSelected="listViewBusqueda_ItemSelected"/>
+            <Label x:Name="lblNoResultados" Text="No se han encontrado usuarios." IsVisible="false" TextColor="Red" Margin="20"/>
+
+            <Image Source="pr1.png" HorizontalOptions="Center" MaximumHeightRequest="250"/>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
+
+</ContentPage>

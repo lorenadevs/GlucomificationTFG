@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.Registro"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False"
+             Title="">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="White" Offset="0.03" />
+                <GradientStop Color="#dfe9f3" Offset="0.4" />
+                <GradientStop Color="#FAFFD1" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <VerticalStackLayout Margin="20">
+            <Label FontFamily="Anthelion" 
+            Text="Registro de usuario"
+            FontSize="35"
+            TextColor="#000700"
+            Margin="20"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Border Margin="10" StrokeShape="RoundRectangle 25,25,25,25" StrokeThickness="0" BackgroundColor="White" >
+                <Entry Placeholder="Nombre" x:Name="entryName" Margin="10" FontSize="18" FontFamily="Recoleta"/>
+            </Border>
+            <Border Margin="10" StrokeShape="RoundRectangle 25,25,25,25" StrokeThickness="0" BackgroundColor="White" >
+                <Entry Placeholder="Nombre de usuario" x:Name="entryNickname" Margin="10" FontSize="18"  FontFamily="Recoleta"/>
+            </Border>
+            <Border Margin="10"  StrokeShape="RoundRectangle 25,25,25,25" StrokeThickness="0" BackgroundColor="White" >
+                <Entry Placeholder="Correo" x:Name="entryMail"  FontSize="18" Margin="10" FontFamily="Recoleta"/>
+            </Border>
+            <Border Margin="10"  StrokeShape="RoundRectangle 25,25,25,25" StrokeThickness="0" BackgroundColor="White" >
+                <Entry IsPassword="True" Placeholder="Password" Margin="10" FontSize="18"  x:Name="entryPass" FontFamily="Recoleta" />
+            </Border>
+            <Border Margin="10"  StrokeShape="RoundRectangle 25,25,25,25" StrokeThickness="0" BackgroundColor="White" >
+                <Entry IsPassword="True" Placeholder="Repetir password" Margin="10" FontSize="18"  FontFamily="Recoleta" x:Name="entryPassConfirm" />
+            </Border>
+            <Button 
+            x:Name="btnRegistro" FontFamily="Recoleta"
+            Text="Crear cuenta" 
+            Clicked="RegistrarUsuario"
+            VerticalOptions="Center" Margin="20,20,20,0" 
+            FontSize="20" 
+            FontAttributes="Bold" >
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#344e41" Offset="0.4" />
+                        <GradientStop Color="#4F6F52" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label 
+            x:Name="lblInfo"
+            Text=""
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            TextColor="Red"/>
+
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>

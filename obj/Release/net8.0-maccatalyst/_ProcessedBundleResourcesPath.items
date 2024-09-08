@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ach1.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ach2.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ach3.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ach4.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ach5.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ach6.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ach7.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ach8.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\avatar1.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\avatar2.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\avatar3.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\avatar4.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\avatar5.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\avatar6.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\avatar7.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\backarrow.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\chart.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\coleccion.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\downarrow.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\edit.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\enter.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\fondo.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\frame1.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\frame2.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\frame3.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\home.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\pr1.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\profile.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\profilebackground.jpg" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\profilebackground2.jpg" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\question.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\rightarrow.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\search.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\settings.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\ui1c.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\uparrow.png" />
+    <BundleResource Include="D:\Glucomification\BACKUP2405\GlucoFirst\MauiApp1\obj\Release\net8.0-maccatalyst\resizetizer\r\Resources\user.png" />
+  </ItemGroup>
+</Project>

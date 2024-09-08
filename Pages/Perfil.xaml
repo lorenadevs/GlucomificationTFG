@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.Perfil"             
+             xmlns:skele="clr-namespace:Maui.FreakyEffects.Skeleton;assembly=Maui.FreakyEffects"
+             xmlns:local="clr-namespace:MauiApp1.Services"
+             xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             Shell.NavBarIsVisible="False"
+             Title="Inicio">
+
+    <ScrollView>
+        <ScrollView.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="White" Offset="0.03" />
+                <GradientStop Color="#dfe9f3" Offset="0.4" />
+                <GradientStop Color="#FAFFD1" Offset="1" />
+            </LinearGradientBrush>
+        </ScrollView.Background>
+        <VerticalStackLayout>
+            <Grid Margin="30" 
+                            skele:SkeletonEffect.IsParent="False"
+                            skele:SkeletonEffect.Animation="{skele:DefaultAnimation Source=Fade, Interval='600', Parameter='0.3'}"
+                            skele:SkeletonEffect.BackgroundColor="DarkGray"
+                            skele:SkeletonEffect.IsBusy="{Binding IsBusy}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+
+                <Frame WidthRequest="75" 
+                       Grid.RowSpan="4"
+                       HeightRequest="75"
+                       CornerRadius="50"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       BackgroundColor="White"
+                       HasShadow="True">
+                    <Image x:Name="imgAvatar"
+                           Aspect="AspectFill"
+                           WidthRequest="90"
+                           HeightRequest="90" />
+                </Frame>
+
+                <Label Margin="20,0,0,0" x:Name="lblWelcomeText" Grid.Column="1" HorizontalTextAlignment="Start" FontFamily="Anthelion" FontSize="22" Grid.Row="1"/>
+                <Label Margin="20,0,0,0" x:Name="lblUsername" Grid.Column="1" FontSize="30" TextColor="#344e41" FontFamily="Anthelion" HorizontalTextAlignment="Start" VerticalOptions="Start" Grid.Row="2"/>
+            </Grid>
+
+            <Border StrokeShape="RoundRectangle 25,25,25,25" Margin="20"
+            StrokeThickness="0">
+                <Grid BackgroundColor="White" HeightRequest="275" Padding="0, 20, 0, 20"
+                            skele:SkeletonEffect.IsParent="True"
+                            skele:SkeletonEffect.Animation="{skele:DefaultAnimation Source=Fade, Interval='600', Parameter='0.3'}"
+                            skele:SkeletonEffect.BackgroundColor="LightGray"
+                            skele:SkeletonEffect.IsBusy="{Binding IsBusy}">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <StackLayout Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Spacing="20" VerticalOptions="Center">
+                        <Label Text="300" HorizontalTextAlignment="End" />
+                        <Label Text="250" HorizontalTextAlignment="End" />
+                        <Label Text="200" HorizontalTextAlignment="End" />
+                        <Label Text="150" HorizontalTextAlignment="End" />
+                        <Label Text="100" HorizontalTextAlignment="End" />
+                        <Label Text="50" HorizontalTextAlignment="End" />
+                    </StackLayout>
+
+                    <micro:ChartView x:Name="glucoChart" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Margin="0, 10" HorizontalOptions="Center" Grid.ColumnSpan="2"/>
+                    
+                    
+
+                    <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="20, 0, 0, 0" VerticalOptions="End" Spacing="10">
+                        <Label Text="00:00" HorizontalTextAlignment="Center" />
+                        <Label Text="04:00" HorizontalTextAlignment="Center" />
+                        <Label Text="08:00" HorizontalTextAlignment="Center" />
+                        <Label Text="12:00" HorizontalTextAlignment="Center" />
+                        <Label Text="16:00" HorizontalTextAlignment="Center" />
+                        <Label Text="20:00" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+
+                    <Label x:Name="lblUltimoValor" Grid.Column="1" Grid.Row="0" FontSize="60" Margin="20, 0, 0, 20" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="End"/>
+                    <Image x:Name="imgFlecha" HeightRequest="40" HorizontalOptions="Start" Margin="10, 0, 20, 0" VerticalOptions="Center" Grid.Column="2" Grid.Row="0"/>
+
+                </Grid>
+            </Border>
+            <Label x:Name="lblNull" Text="Aún no tienes controles registrados." FontSize="18" FontFamily="Anthelion" Margin="20" IsVisible="False"/>
+
+            <Label Text="Esta semana..." TextColor="#344e41" FontFamily="Anthelion" FontSize="25" Margin="25, 0, 0, 0"/>
+
+            <Grid Padding="20, 0, 0, 0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border StrokeShape="RoundRectangle 25,25,25,25" Margin="0,20,20,20" StrokeThickness="0">
+
+                    <Grid  Grid.Column="0" MinimumHeightRequest="150">
+                        <Grid.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="#344e41" Offset="0.4" />
+                                <GradientStop Color="#4F6F52" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Grid.Background>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+                        </Grid.RowDefinitions>
+
+                        <Label  Margin="0,15,0,0" FontSize="20" TextColor="#E8DFCA" Text="Has realizado" HorizontalOptions="Center" FontFamily="Anthelion" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"/>
+                        <Label Text="" x:Name="lblNumLecturas" TextColor="#E8DFCA" FontAttributes="Bold" FontFamily="Anthelion" VerticalOptions="Center" HorizontalOptions="Center" FontSize="50" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"/>
+                        <Label Text="controles." FontSize="20" TextColor="#E8DFCA" Grid.ColumnSpan="2" HorizontalOptions="Center" FontFamily="Anthelion" Grid.Column="0" Grid.Row="2"/>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Column="1" StrokeShape="RoundRectangle 25,25,25,25" Margin="0,20,20,20" StrokeThickness="0">
+
+                    <Grid MinimumHeightRequest="150">
+                        <Grid.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="White" Offset="0.4" />
+                                <GradientStop Color="#F5EFE6" Offset="1.0" />
+
+                            </LinearGradientBrush>
+                        </Grid.Background>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+                        </Grid.RowDefinitions>
+
+                        <Label Margin="3,0" FontSize="20" TextColor="#344e41" Text="Has estado en rango el" HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" FontFamily="Anthelion" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0"/>
+                        <Label Text="" x:Name="lblPorcentajeRango" TextColor="#344e41" FontAttributes="Bold" FontFamily="Anthelion" VerticalOptions="Center" HorizontalOptions="Center" FontSize="50" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"/>
+                        <Label Text="del tiempo." Margin="3,0" FontSize="20" TextColor="#344e41" Grid.ColumnSpan="2" HorizontalOptions="Center" FontFamily="Anthelion" Grid.Column="0" Grid.Row="2"/>
+                    </Grid>
+                </Border>
+
+            </Grid>
+            <Entry Text="" x:Name="tokenUsuario" Margin="10, 10, 10, 10" TextColor="#344e41" FontSize="20" FontFamily="Anthelion" VerticalOptions="End" VerticalTextAlignment="End"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.PopUpMenu"
+             Title="PopUpMenu">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="White" Offset="0.03" />
+                <GradientStop Color="#dfe9f3" Offset="0.4" />
+                <GradientStop Color="#FAFFD1" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Border
+                VerticalOptions="Center"
+                Background="White"
+                StrokeShape="{RoundRectangle CornerRadius=20}"
+                Margin="30"
+                Padding="30">
+            <Grid x:Name="gridPrincipal">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <ImageButton Source="backarrow.png" x:Name="btnVolver" Clicked="VolverAtras" MaximumHeightRequest="20" Grid.Row="0" Margin="-20,0,0,10" HorizontalOptions="Start" VerticalOptions="Start"/>
+
+                <Label Text="Visibilidad del perfil" FontFamily="Anthelion" FontSize="28" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Start"/>
+
+
+                <Switch x:Name="switchVisibilidad" Grid.Row="2" Grid.ColumnSpan="2" Toggled="CambiarVisibilidad" HorizontalOptions="End" />
+
+                <Label x:Name="lblVisibilidad" FontFamily="Anthelion" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0"
+                       FontSize="24"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center" />
+
+                <Label Text="Imagen" FontFamily="Anthelion" FontSize="28" Margin="0, 0, 0, 10" Grid.ColumnSpan="2" Grid.Row="3" HorizontalOptions="Start"/>
+
+
+                <Frame WidthRequest="50" 
+                       Grid.Row="4"
+                        Grid.RowSpan="4"
+                        HeightRequest="50"
+                        CornerRadius="50"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Margin="0,0,0,0"
+                        BackgroundColor="White"
+                        >
+
+                    <Image  Source="avatar1.jpg"
+                                VerticalOptions="Fill"
+                                HorizontalOptions="Fill"
+                                Aspect="AspectFill"
+                                WidthRequest="50"
+                                HeightRequest="50" 
+                                Clip="EllipseGeometry Center='50,50' RadiusX='50' RadiusY='50'" />
+                </Frame>
+                <Button x:Name="btnCambiarImagen" Clicked="btnCambiarImagen_Clicked" TextColor="#344e41" FontSize="20" FontFamily="Anthelion" BackgroundColor="DarkSeaGreen" Grid.Row="4" Grid.Column="1" Text="Cambiar" HorizontalOptions="End"/>
+            </Grid>
+        </Border>
+    </Grid>
+
+
+</ContentPage>

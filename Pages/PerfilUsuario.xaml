@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Pages.PerfilUsuario"
+             xmlns:skele="clr-namespace:Maui.FreakyEffects.Skeleton;assembly=Maui.FreakyEffects"
+             xmlns:local="clr-namespace:MauiApp1.Services"
+             xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             Title="PerfilUsuario" Shell.NavBarIsVisible="False">
+    <ScrollView >
+        <ScrollView.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="White" Offset="0.09" />
+                <GradientStop Color="#dfe9f3" Offset="0.7" />
+                <GradientStop Color="#FAFFD1" Offset="1" />
+            </LinearGradientBrush>
+        </ScrollView.Background>
+        <VerticalStackLayout>
+            <Grid x:Name="gridPrincipal">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="75" />
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <VerticalStackLayout Grid.Row="2">
+                    <Label x:Name="lblUsername" FontFamily="Anthelion" HorizontalTextAlignment="Center" Grid.Row="1" VerticalTextAlignment="Center" FontSize="30"/>
+
+                    <Label x:Name="lblRanking" Text="" FontFamily="Recoleta" FontSize="20" Grid.Column="2" Margin="20,10,0,0"/>
+
+                    <!--Logros-->
+                    <Border StrokeShape="RoundRectangle 15,15,15,15" x:Name="zonaLogros" Margin="10" BackgroundColor="White">
+                        <ScrollView Orientation="Horizontal">
+                            <HorizontalStackLayout Margin="20" x:Name="horizontalStackLayoutAchievements">
+                                <!--En C# se añaden aquí las imágenes de los logros del usuario-->
+                            </HorizontalStackLayout>
+                        </ScrollView>
+                    </Border>
+                </VerticalStackLayout>
+
+                <Image Source="profilebackground2.jpg"
+                   Aspect="AspectFill"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   HeightRequest="200" />
+
+
+                <Frame WidthRequest="55"
+                       HeightRequest="50"
+                       CornerRadius="50"
+                       VerticalOptions="Start"
+                       Margin="0,20,10,0"
+                       BackgroundColor="White"
+                       HasShadow="True"
+                       Grid.Row="0"
+                       HorizontalOptions="End" 
+                       x:Name="frameEditar">
+
+                    <ImageButton Clicked="btnEditarPerfil" VerticalOptions="Fill" HorizontalOptions="Fill" HeightRequest="200" Source="edit.png" />
+
+
+                </Frame>
+
+
+                <!-- Imagen de perfil -->
+                <Grid Grid.Row="0"
+                  Grid.Column="0"
+                  VerticalOptions="Center"
+                  HorizontalOptions="Center"
+                  HeightRequest="200">
+                    <Frame WidthRequest="100"
+                       HeightRequest="100"
+                       CornerRadius="50"
+                       VerticalOptions="End"
+                       HorizontalOptions="Center"
+                       Margin="0,0,0,-50"
+                       BackgroundColor="White"
+                       HasShadow="True">
+                        <Image x:Name="imgAvatar"
+                           Aspect="AspectFill"
+                           WidthRequest="100"
+                           HeightRequest="130" />
+                    </Frame>
+                </Grid>
+
+            </Grid>
+
+            <Border StrokeShape="RoundRectangle 25,25,25,25" Margin="20" StrokeThickness="0" x:Name="zonaGrafico">
+                <Grid BackgroundColor="White" HeightRequest="275" Padding="0, 20, 0, 20"
+                        skele:SkeletonEffect.IsParent="True"
+                        skele:SkeletonEffect.Animation="{skele:DefaultAnimation Source=Fade, Interval='600', Parameter='0.3'}"
+                        skele:SkeletonEffect.BackgroundColor="LightGray"
+                        skele:SkeletonEffect.IsBusy="{Binding IsBusy}">
+                    
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    
+                    <StackLayout Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Spacing="20" VerticalOptions="Center">
+                        <Label Text="300" HorizontalTextAlignment="End" />
+                        <Label Text="250" HorizontalTextAlignment="End" />
+                        <Label Text="200" HorizontalTextAlignment="End" />
+                        <Label Text="150" HorizontalTextAlignment="End" />
+                        <Label Text="100" HorizontalTextAlignment="End" />
+                        <Label Text="50" HorizontalTextAlignment="End" />
+                    </StackLayout>
+
+                    <micro:ChartView x:Name="glucoChart" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Margin="0, 10" HorizontalOptions="Center" Grid.ColumnSpan="2"/>
+
+                    <StackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="20, 0, 0, 0" VerticalOptions="End" Spacing="10">
+                        <Label Text="00:00" HorizontalTextAlignment="Center" />
+                        <Label Text="04:00" HorizontalTextAlignment="Center" />
+                        <Label Text="08:00" HorizontalTextAlignment="Center" />
+                        <Label Text="12:00" HorizontalTextAlignment="Center" />
+                        <Label Text="16:00" HorizontalTextAlignment="Center" />
+                        <Label Text="20:00" HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                    
+
+                    <Label x:Name="lblUltimoValor" Grid.Column="1" Grid.Row="0" FontSize="60" Margin="20, 0, 0, 20" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="End"/>
+                    <Image x:Name="imgFlecha" HeightRequest="40" HorizontalOptions="Start" Margin="10, 0, 20, 0" VerticalOptions="Center" Grid.Column="2" Grid.Row="0"/>
+
+                </Grid>
+            </Border>
+
+            <Label x:Name="lblPerfilPrivado" IsVisible="False" Text="Este perfil es privado." FontFamily="Anthelion" Margin="20" HorizontalTextAlignment="Center" TextColor="DarkOliveGreen" VerticalTextAlignment="Center" FontSize="24"/>
+            <Label x:Name="lblNull" Text="Este usuario aún no tiene controles registrados." FontFamily="Anthelion" FontSize="18" TextColor="#000700" Margin="20" IsVisible="False"/>
+
+
+
+        </VerticalStackLayout>
+        
+        
+    </ScrollView>
+</ContentPage>
